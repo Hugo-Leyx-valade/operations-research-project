@@ -8,3 +8,4 @@ EFREI project for operations research. Creation of mathematical algorithms to op
   * https://moodle.myefrei.fr/pluginfile.php/599940/mod_resource/content/1/SM602-Projet-19-48.pdf
   * https://moodle.myefrei.fr/mod/lti/view.php?id=105587
   * https://moodle.myefrei.fr/mod/lti/view.php?id=105588
+  * https://docs.google.com/document/d/1wihA-ZXBunJ-pxhEw3tKzJPLrMxfADqRxaapOeo9hD4/edit?tab=t.0
