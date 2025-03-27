@@ -1,6 +1,5 @@
-def print_test(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Ceci est un, {name}')  # Press ⌘F8 to toggle the breakpoint.
+from collections import deque
+import copy
 
 
 def graph_import(link):
