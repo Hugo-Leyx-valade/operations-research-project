@@ -4,7 +4,6 @@ from functions import *
 if __name__ == "__main__":
     imported_data = graph_import("graphs/graph1.txt")
     graph = imported_data[0]
-    print_graph_to_matrix_of_values(graph)
     flow_type = imported_data[1]
     if flow_type == 1:
         print("problème de flot à cout minimal")
@@ -16,5 +15,7 @@ if __name__ == "__main__":
     if flow_type == 2:  # flot max
         print_graph_to_matrix_of_values(graph)
         ff_mat = ford_fulkerson(graph)[1]
+        compute_flow_matrix(graph, ff_mat)
+        pl = push_relabel(graph,1,len(graph)-1)
+        print('\n valeurs du poussé réétiqueté : ' + str(pl))
 
-    compute_flow_matrix(graph,ff_mat)
