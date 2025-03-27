@@ -40,6 +40,9 @@ def print_graph_to_matrix_of_values(liste_adjacence):
         print(row)
 
 
+import copy
+from collections import deque
+
 def ford_fulkerson(graph, s=0, t=None):
     n = len(graph)
     if t is None:
@@ -77,7 +80,8 @@ def ford_fulkerson(graph, s=0, t=None):
         iteration += 1
 
     print(f"\n🌊 Flot maximal trouvé : {max_flow}")
-    return max_flow
+    return max_flow, residual
+
 
 
 def bfs(residual, s, t, parent):
@@ -106,6 +110,11 @@ def bfs(residual, s, t, parent):
                     return min_capacity, path
     return 0, []
 
+def print_graph_to_matrix_of_values(graph):
+    for row in graph:
+        print(" ".join(map(str, row)))
+
+
 
 def print_flow_max(graph1, graph2):
     n = len(graph1)
@@ -132,24 +141,15 @@ def compute_flow_matrix(original_graph, residual_graph):
     """ Calcule la matrice des flots maximaux """
     n = len(original_graph)
     # Créer une matrice remplie de '*'
-    matrice = [['*' for _ in range(n)] for _ in range(n)]
+    matrice = [['0' for _ in range(n)] for _ in range(n)]
     print("La matrice de capacité")
     # Remplir la matrice avec les valeurs données
     for i in range(n):
         for j in range(len(original_graph[i])):
             if original_graph[i][j] != 0:
-                matrice = str(original_graph[i][j] - residual_graph[i][j]) + '/' + str(original_graph[i][j])  # Stocker en tant que chaîne pour l'affichage
-    # Affichage de l'en-tête des colonnes
-    header = "    " + "  ".join(str(i) if i > 0 and i < n - 1 else "s" if i == 0 else "t" for i in range(n))
-    col_width = max(len(str(n)), 2)  # Largeur minimale de 2
-    separator = "   " + "-" * (n * (col_width + 1))
-    print(header)
-    print(separator)
-    # Affichage des lignes
-    for i in range(n):
-        row = f"{i if (i > 0 and i < n - 1) else 's' if i == 0 else 't'} | " + "  ".join(
-            matrice[i][j] if j < len(matrice[i]) else ' * ' for j in range(n))
-        print(row)
+                matrice[i][j] = str(original_graph[i][j] - residual_graph[i][j]) + '/' + str(original_graph[i][j])  # Stocker en tant que chaîne pour l'affichage
+    
+
 
 
 def print_graph(graph):

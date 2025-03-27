@@ -4,6 +4,7 @@ from functions import *
 if __name__ == "__main__":
     imported_data = graph_import("graphs/graph1.txt")
     graph = imported_data[0]
+    print_graph_to_matrix_of_values(graph)
     flow_type = imported_data[1]
     if flow_type == 1:
         print("problème de flot à cout minimal")
