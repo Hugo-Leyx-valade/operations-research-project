@@ -6,9 +6,9 @@ if __name__ == "__main__":
     graph = imported_data[0]
     flow_type = imported_data[1]
     if flow_type == 1:
-        print("problème de flow à cout minimal")
+        print("problème de flot à cout minimal")
     else:
-        print("problème de cout maximal") #méthode F-F ou pousser-réétiqueter
+        print("problème de flot maximal") #méthode F-F ou pousser-réétiqueter
 
     print_graph_to_matrix_of_values(graph)
 
