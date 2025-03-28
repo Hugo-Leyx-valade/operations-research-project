@@ -185,7 +185,6 @@ def print_graph(graph):
 
 
 
-
 def push_relabel(graph, source, sink):
     n = len(graph)
     height = [0] * n  # Hauteur des sommets
@@ -232,7 +231,6 @@ def push_relabel(graph, source, sink):
             print(f"INITIAL PUSH: {source} -> {v} | Flow: {graph[source][v]}")
 
     active = collections.deque([i for i in range(n) if i != source and i != sink and excess[i] > 0])
-
     while active:
         u = active.popleft()
         old_height = height[u]
@@ -243,7 +241,6 @@ def push_relabel(graph, source, sink):
     print("Final Flow Matrix:")
     for row in flow:
         print(row)
-
     print(f"Final Excess: {[excess[i] for i in range(n)]}")
     print(f"Final Heights: {[height[i] for i in range(n)]}")
 

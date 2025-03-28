@@ -16,6 +16,6 @@ if __name__ == "__main__":
         print_graph_to_matrix_of_values(graph)
         ff_mat = ford_fulkerson(graph)[1]
         compute_flow_matrix(graph, ff_mat)
-        pl = push_relabel(graph,1,len(graph)-1)
+        pl = push_relabel(graph,0,len(graph)-1)
         print('\n valeurs du poussé réétiqueté : ' + str(pl))
 
