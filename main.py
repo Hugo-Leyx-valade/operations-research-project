@@ -1,8 +1,8 @@
-from functions import *
+from functions_max_flow import *
 
 # Press the green button in the gutter to run the script.
 if __name__ == "__main__":
-    imported_data = graph_import("graphs/graph11.txt")
+    imported_data = graph_import("graphs/graph3.txt")
     graph = imported_data[0]
     flow_type = imported_data[1]
     if flow_type == 1:
