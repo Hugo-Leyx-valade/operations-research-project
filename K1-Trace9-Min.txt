@@ -1,0 +1,94 @@
+Matrice 1 :
+[0, 15, 8, 0, 0, 0]
+[0, 0, 20, 4, 10, 0]
+[0, 0, 0, 15, 4, 0]
+[0, 0, 0, 0, 20, 5]
+[0, 0, 5, 0, 0, 15]
+[0, 0, 0, 0, 0, 0]
+
+Matrice 2 :
+[0, 4, 4, 0, 0, 0]
+[0, 0, 2, 2, 6, 0]
+[0, 0, 0, 1, 3, 0]
+[0, 0, 0, 0, 2, 0]
+[0, 0, 3, 0, 0, 0]
+[0, 0, 0, 0, 0, 0]
+
+🌀 Itération 1 :
+✔️ Chaîne améliorante trouvée : 0 → 1 → 3 → 5
+🔁 Valeur de flot pour cette chaîne : 4
+📊 Graphe résiduel mis à jour :
+La matrice de capacité
+    s  1  2  3  4  t
+   ------------------
+s | 0  11  8  0  0  0
+1 | 4  0  20  0  10  0
+2 | 0  0  0  15  4  0
+3 | 0  4  0  0  20  1
+4 | 0  0  5  0  0  15
+t | 0  0  0  4  0  0
+
+🌀 Itération 2 :
+✔️ Chaîne améliorante trouvée : 0 → 1 → 4 → 5
+🔁 Valeur de flot pour cette chaîne : 10
+📊 Graphe résiduel mis à jour :
+La matrice de capacité
+    s  1  2  3  4  t
+   ------------------
+s | 0  1  8  0  0  0
+1 | 14  0  20  0  0  0
+2 | 0  0  0  15  4  0
+3 | 0  4  0  0  20  1
+4 | 0  10  5  0  0  5
+t | 0  0  0  4  10  0
+
+🌀 Itération 3 :
+✔️ Chaîne améliorante trouvée : 0 → 2 → 3 → 5
+🔁 Valeur de flot pour cette chaîne : 1
+📊 Graphe résiduel mis à jour :
+La matrice de capacité
+    s  1  2  3  4  t
+   ------------------
+s | 0  1  7  0  0  0
+1 | 14  0  20  0  0  0
+2 | 1  0  0  14  4  0
+3 | 0  4  1  0  20  0
+4 | 0  10  5  0  0  5
+t | 0  0  0  5  10  0
+
+🌀 Itération 4 :
+✔️ Chaîne améliorante trouvée : 0 → 2 → 4 → 5
+🔁 Valeur de flot pour cette chaîne : 4
+📊 Graphe résiduel mis à jour :
+La matrice de capacité
+    s  1  2  3  4  t
+   ------------------
+s | 0  1  3  0  0  0
+1 | 14  0  20  0  0  0
+2 | 5  0  0  14  0  0
+3 | 0  4  1  0  20  0
+4 | 0  10  9  0  0  1
+t | 0  0  0  5  14  0
+
+🌀 Itération 5 :
+✔️ Chaîne améliorante trouvée : 0 → 2 → 3 → 4 → 5
+🔁 Valeur de flot pour cette chaîne : 1
+📊 Graphe résiduel mis à jour :
+La matrice de capacité
+    s  1  2  3  4  t
+   ------------------
+s | 0  1  2  0  0  0
+1 | 14  0  20  0  0  0
+2 | 6  0  0  13  0  0
+3 | 0  4  2  0  19  0
+4 | 0  10  9  1  0  0
+t | 0  0  0  5  15  0
+
+🌀 Itération 6 :
+❌ Aucun chemin améliorant trouvé. L'algorithme s'arrête.
+
+🌊 Flot maximal trouvé : 20
+
+Flot cible : 20
+Flot maximum : 20
+Coût minimal : 150

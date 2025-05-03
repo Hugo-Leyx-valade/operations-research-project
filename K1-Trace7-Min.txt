@@ -1,0 +1,80 @@
+Matrice 1 :
+[0, 5, 0, 8, 5, 0]
+[0, 0, 1, 0, 0, 7]
+[0, 0, 0, 0, 0, 1]
+[0, 0, 0, 0, 0, 9]
+[0, 0, 0, 4, 0, 1]
+[0, 0, 0, 0, 0, 0]
+
+Matrice 2 :
+[0, 4, 0, 2, 4, 0]
+[0, 0, 2, 0, 0, 3]
+[0, 0, 0, 0, 0, 3]
+[0, 0, 0, 0, 0, 6]
+[0, 0, 0, 2, 0, 2]
+[0, 0, 0, 0, 0, 0]
+
+🌀 Itération 1 :
+✔️ Chaîne améliorante trouvée : 0 → 1 → 5
+🔁 Valeur de flot pour cette chaîne : 5
+📊 Graphe résiduel mis à jour :
+La matrice de capacité
+    s  1  2  3  4  t
+   ------------------
+s | 0  0  0  8  5  0
+1 | 5  0  1  0  0  2
+2 | 0  0  0  0  0  1
+3 | 0  0  0  0  0  9
+4 | 0  0  0  4  0  1
+t | 0  5  0  0  0  0
+
+🌀 Itération 2 :
+✔️ Chaîne améliorante trouvée : 0 → 3 → 5
+🔁 Valeur de flot pour cette chaîne : 8
+📊 Graphe résiduel mis à jour :
+La matrice de capacité
+    s  1  2  3  4  t
+   ------------------
+s | 0  0  0  0  5  0
+1 | 5  0  1  0  0  2
+2 | 0  0  0  0  0  1
+3 | 8  0  0  0  0  1
+4 | 0  0  0  4  0  1
+t | 0  5  0  8  0  0
+
+🌀 Itération 3 :
+✔️ Chaîne améliorante trouvée : 0 → 4 → 5
+🔁 Valeur de flot pour cette chaîne : 1
+📊 Graphe résiduel mis à jour :
+La matrice de capacité
+    s  1  2  3  4  t
+   ------------------
+s | 0  0  0  0  4  0
+1 | 5  0  1  0  0  2
+2 | 0  0  0  0  0  1
+3 | 8  0  0  0  0  1
+4 | 1  0  0  4  0  0
+t | 0  5  0  8  1  0
+
+🌀 Itération 4 :
+✔️ Chaîne améliorante trouvée : 0 → 4 → 3 → 5
+🔁 Valeur de flot pour cette chaîne : 1
+📊 Graphe résiduel mis à jour :
+La matrice de capacité
+    s  1  2  3  4  t
+   ------------------
+s | 0  0  0  0  3  0
+1 | 5  0  1  0  0  2
+2 | 0  0  0  0  0  1
+3 | 8  0  0  0  1  0
+4 | 2  0  0  3  0  0
+t | 0  5  0  9  1  0
+
+🌀 Itération 5 :
+❌ Aucun chemin améliorant trouvé. L'algorithme s'arrête.
+
+🌊 Flot maximal trouvé : 15
+
+Flot cible : 15
+Flot maximum : 15
+Coût minimal : 117
